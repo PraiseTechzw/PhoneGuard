@@ -144,5 +144,3 @@ fun ProfileOption(icon: androidx.compose.ui.graphics.vector.ImageVector, title: 
     }
 }
 
-// Extension to allow clickable on Row without Ripple (manual implementation if needed)
-import androidx.compose.foundation.clickable

@@ -22,6 +22,8 @@ import com.praisetechzw.phoneguard.ui.theme.PrimaryGradient
 import com.praisetechzw.phoneguard.ui.theme.TextPrimary
 import com.praisetechzw.phoneguard.ui.theme.TextSecondary
 import kotlinx.coroutines.launch
+import androidx.hilt.navigation.compose.hiltViewModel
+
 
 data class OnboardingPage(
     val title: String,
@@ -47,7 +49,6 @@ val onboardingPages = listOf(
     )
 )
 
-import androidx.hilt.navigation.compose.hiltViewModel
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
