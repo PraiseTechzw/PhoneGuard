@@ -33,6 +33,10 @@ class DeviceRepository @Inject constructor(
         }
     }
 
+    fun getCheckHistory(): Flow<List<PhoneReportEntity>> {
+        return dao.getReportsFlow()
+    }
+
     suspend fun getHistory(): List<PhoneReportEntity> {
         return dao.getAllReports()
     }

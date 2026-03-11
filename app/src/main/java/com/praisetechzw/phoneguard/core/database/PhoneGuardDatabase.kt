@@ -1,6 +1,7 @@
 package com.praisetechzw.phoneguard.core.database
 
 import androidx.room.*
+import kotlinx.coroutines.flow.Flow
 
 @Entity(tableName = "phone_reports")
 data class PhoneReportEntity(
@@ -14,6 +15,9 @@ data class PhoneReportEntity(
 
 @Dao
 interface PhoneReportDao {
+    @Query("SELECT * FROM phone_reports ORDER BY timestamp DESC")
+    fun getReportsFlow(): Flow<List<PhoneReportEntity>>
+
     @Query("SELECT * FROM phone_reports")
     suspend fun getAllReports(): List<PhoneReportEntity>
 
