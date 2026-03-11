@@ -35,7 +35,7 @@ class LoginViewModel @Inject constructor(
             delay(1500)
             
             if (email == "user@example.com" && password == "password") {
-                userRepository.setAuthToken("mock_token")
+                userRepository.saveUserSession("mock_user_id", "mock_token")
                 onSuccess()
             } else {
                 _error.value = "Invalid email or password"

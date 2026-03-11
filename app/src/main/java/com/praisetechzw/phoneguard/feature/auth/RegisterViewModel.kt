@@ -39,7 +39,7 @@ class RegisterViewModel @Inject constructor(
             // Mock API call
             delay(2000)
             
-            userRepository.setAuthToken("mock_new_token")
+            userRepository.saveUserSession("mock_new_id", "mock_new_token")
             onSuccess()
             
             _isLoading.value = false

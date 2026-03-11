@@ -124,7 +124,7 @@ fun DashboardScreen(
                         .padding(20.dp)
                 ) {
                     Row(
-                        verticalAlignment = Alignment.CenterHorizontally,
+                        verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.spacedBy(16.dp)
                     ) {
                         Icon(
